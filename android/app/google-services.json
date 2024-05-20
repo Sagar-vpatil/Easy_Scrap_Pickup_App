@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "205060383774",
+    "project_id": "nda-project-ee4d3",
+    "storage_bucket": "nda-project-ee4d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205060383774:android:9042cbbaa74e80495dba0f",
+        "android_client_info": {
+          "package_name": "com.example.nda_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmQ5o__GNqrOF3ixrI1yErynJFsh7Rd1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
