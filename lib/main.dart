@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nda_demo/home.dart';
 import 'package:nda_demo/login.dart';
 import 'package:nda_demo/otpscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -15,6 +16,7 @@ void main() async{
     routes: {
       'login': (context) => const MyLogin(),
       'otp': (context) =>const  MyOtp(),
+      'home': (context) => const MyHome()
     },
   ));
 }

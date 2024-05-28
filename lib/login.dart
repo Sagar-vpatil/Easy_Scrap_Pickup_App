@@ -1,7 +1,12 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 class MyLogin extends StatefulWidget {
   const MyLogin({super.key});
+
+  static String verify = "";
+
+
 
   @override
   State<MyLogin> createState() => _MyLoginState();
@@ -9,6 +14,7 @@ class MyLogin extends StatefulWidget {
 
 class _MyLoginState extends State<MyLogin> {
   TextEditingController countryCode = TextEditingController();
+  var phone="";
   @override
   void initState() {
     // TODO: implement initState
@@ -21,7 +27,7 @@ class _MyLoginState extends State<MyLogin> {
     return Scaffold(
 
         appBar: AppBar(
-          title: const Text('NDA Online Kabaadiwala'),
+          title: const Text('NDA Online Kabadiwala'),
           centerTitle: true,
           backgroundColor: Colors.green.shade600,
 
@@ -91,9 +97,13 @@ class _MyLoginState extends State<MyLogin> {
 
                             const SizedBox(width: 10),
 
-                            const Expanded(
+                            Expanded(
                                 child: TextField(
-                                  decoration: InputDecoration(
+                                  keyboardType: TextInputType.phone,
+                                  onChanged: (value){
+                                    phone = value;
+                                  },
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                     hintText: "Phone Number",
                                   ),
@@ -110,8 +120,29 @@ class _MyLoginState extends State<MyLogin> {
                     SizedBox(
                       height: 45,
                       width: double.infinity,
-                      child: ElevatedButton(onPressed: (){
-                        Navigator.pushNamed(context, 'otp');
+                      child: ElevatedButton(onPressed: () async{
+                        //check length of phone number
+                        if(phone.length<10 || phone.length>10 || phone.isEmpty ){
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Invalid Phone Number',style: TextStyle(color: Colors.white),),backgroundColor: Colors.red,
+                                duration: Duration(seconds: 2),
+                              )
+                          );
+                          return;
+                        }
+                        await FirebaseAuth.instance.verifyPhoneNumber(
+                          phoneNumber: countryCode.text+phone,
+                          verificationCompleted: (PhoneAuthCredential credential) {},
+                          verificationFailed: (FirebaseAuthException e) {},
+                          codeSent: (String verificationId, int? resendToken) {
+                            MyLogin.verify = verificationId;
+                            Navigator.pushNamed(context, 'otp');
+                          },
+                          codeAutoRetrievalTimeout: (String verificationId) {},
+                        );
+
+                        //Navigator.pushNamed(context, 'otp');
                       },
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(Colors.green.shade600),
