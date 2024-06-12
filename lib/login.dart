@@ -163,7 +163,21 @@ class _MyLoginState extends State<MyLogin> {
 
                     ),
 
+                    const SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(onPressed: (){
+                          Navigator.pushNamed(context, 'signup');
+                        }, child: const Text('Sign Up',style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: 18,
+                            color: Color(0xff4c505b)
 
+                        ),)),
+
+                      ],
+                    )
 
                   ]
               )

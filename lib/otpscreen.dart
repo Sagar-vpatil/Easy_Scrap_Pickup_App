@@ -10,6 +10,7 @@ class MyOtp extends StatefulWidget {
 }
 
 class _MyOtpState extends State<MyOtp> {
+
   final FirebaseAuth auth = FirebaseAuth.instance;
   late PinTheme defaultPinTheme;
   late PinTheme focusedPinTheme;
@@ -118,7 +119,7 @@ class _MyOtpState extends State<MyOtp> {
                           // Sign the user in (or link) with the credential
                           await auth.signInWithCredential(credential);
                           Navigator.pushNamedAndRemoveUntil(
-                              context, 'home', (route) => false);
+                              context, 'userhome', (route) => false);
                         }
                         catch(e){
                           //Show error message on the screen
