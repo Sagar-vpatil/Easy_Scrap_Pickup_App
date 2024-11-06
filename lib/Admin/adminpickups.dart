@@ -1,10 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
-
 import 'package:url_launcher/url_launcher.dart';
-
-import '../User/userhome.dart';
+import 'adminhome.dart';
 import '../service/database.dart';
 
 class MyAdminPickups extends StatefulWidget {
