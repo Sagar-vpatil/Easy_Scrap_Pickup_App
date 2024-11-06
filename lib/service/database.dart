@@ -47,6 +47,27 @@ class DatabaseMethod{
         .snapshots();
   }
 
+  Future<Stream<QuerySnapshot>> getAllScheduledPickups() async{
+    return FirebaseFirestore.instance
+        .collection('Pickups')
+        .where('Status',isEqualTo: 'Scheduled')
+        .snapshots();
+  }
+
+  Future<Stream<QuerySnapshot>> getAllCompletedPickups() async{
+    return FirebaseFirestore.instance
+        .collection('Pickups')
+        .where('Status',isEqualTo: 'Completed')
+        .snapshots();
+  }
+
+  Future updatePickupStatus(String orderId) async{
+    return await FirebaseFirestore.instance
+        .collection('Pickups')
+        .doc(orderId)
+        .update({'Status': 'Completed'});
+  }
+
   Future updatePickupPhone(String newPhone,String oldPhone) async{
     return await FirebaseFirestore.instance
         .collection('Pickups')

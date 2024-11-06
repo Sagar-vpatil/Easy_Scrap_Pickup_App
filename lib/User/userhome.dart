@@ -30,7 +30,7 @@ class _MyUserHomeState extends State<MyUserHome> {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.green[700],
         title: const Text(
-          'NDA Online Kabadiwala',
+          'Online Kabadiwala',
           style: TextStyle(
             fontSize: 30,
             color: Colors.white,
@@ -58,18 +58,19 @@ class _MyUserHomeState extends State<MyUserHome> {
               width: double.infinity,
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 250,
+                  height:150,
+
                   autoPlay: true,
                   enlargeCenterPage: true,
-                  autoPlayInterval: const Duration(seconds: 6),
+                  autoPlayInterval: const Duration(seconds: 3),
                   viewportFraction: 0.8,
                   aspectRatio: 16 / 9,
                   initialPage: 0,
                 ),
                 items: [
-                  'assets/download.jpeg',
                   'assets/b.png',
                   'assets/b1.png',
+                  'assets/home_banner3.png',
                 ].map((imagePath) {
                   return Builder(
                     builder: (BuildContext context) {

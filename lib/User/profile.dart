@@ -201,7 +201,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 SizedBox(height: 16),
                 Text(
-                  'NDA KadiWala Support',
+                  'Online Kabadiwala Support',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 8),
@@ -235,7 +235,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Column(
               children: <Widget>[
                 Text(
-                  'About Us Content',
+                  'Developed by: Sagar Patil', // Display your team name
                   style: TextStyle(fontSize: 16),
                 ),
               ],
