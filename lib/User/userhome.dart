@@ -27,27 +27,27 @@ class _MyUserHomeState extends State<MyUserHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Easy Scrap Pickup',style:
+        TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),),
+        centerTitle: true,
+        backgroundColor: Colors.green.shade600,
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.green[700],
-        title: const Text(
-          'Online Kabadiwala',
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+        leading: Container(
+          margin: EdgeInsets.only(left: 35), // Adjust margin as needed
+          child: Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.rotationY(3.14159),  // Rotating 180 degrees
+            child: Icon(
+              Icons.local_shipping,
+              color: Colors.white,
+              size: 30.0,  // Adjust size as needed
+            ),
           ),
         ),
-        iconTheme: const IconThemeData(color: Colors.white),
-        actions: [
-          IconButton(
-            icon: const FaIcon(FontAwesomeIcons.bell),
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text("Notifications pressed")),
-              );
-            },
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Column(

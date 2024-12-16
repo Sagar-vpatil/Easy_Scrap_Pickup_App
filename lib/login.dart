@@ -32,9 +32,27 @@ class _MyLoginState extends State<MyLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Online Kabadiwala'),
+        title: const Text('Easy Scrap Pickup',style:
+        TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),),
         centerTitle: true,
         backgroundColor: Colors.green.shade600,
+        automaticallyImplyLeading: false,
+        leading: Container(
+          margin: EdgeInsets.only(left: 35), // Adjust margin as needed
+          child: Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.rotationY(3.14159),  // Rotating 180 degrees
+            child: Icon(
+              Icons.local_shipping,
+              color: Colors.white,
+              size: 30.0,  // Adjust size as needed
+            ),
+          ),
+        ),
       ),
       body: isLoading
           ? const SplashScreen()

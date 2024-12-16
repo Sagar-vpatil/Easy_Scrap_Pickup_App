@@ -35,7 +35,7 @@ class _MyAdminHomeState extends State<MyAdminHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Online Kabadiwala',style:
+        title: const Text('Easy Scrap Pickup',style:
         TextStyle(
           fontSize: 25,
           fontWeight: FontWeight.bold,
