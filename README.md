@@ -59,8 +59,16 @@ This app promotes efficient waste management by bridging the gap between users a
 ---
 
 ### 🖥️ Admin Side
-1. **Admin Dashboard**  
-   ![Admin Dashboard](.assets/screenshots/Screenshot7.png)
+<table>
+  <tr>
+    <td><img src="./assets/screenshots/Screenshot7.png" alt="Admin Dashboard" width="250"></td>
+    <td><img src="./assets/screenshots/Screenshot8.png" alt="Pickup Management Screen" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center">Admin Dashboard</td>
+    <td align="center">Pickup Management</td>
+  </tr>
+</table>
 ---
 
 ## ⚙️ **Setup Instructions**
