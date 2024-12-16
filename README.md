@@ -43,14 +43,16 @@ This app promotes efficient waste management by bridging the gap between users a
 ## 💬 **Screenshots**
 
 ### 📱 User Side
-1. **Login Screen**  
-  <img src="./assets/screenshots/Screenshot1.png" alt="User Home Screen" width="300" height="500">
-
-2. **Home Screen**  
-   ![User Home Screen](.assets/screenshots/Screenshot2.png)
-
-3. **Pickup Scheduling**  
-   ![Pickup Scheduling Screen](.assets/screenshots/Screenshot4.png)
+<table>
+  <tr>
+    <td><img src="./assets/screenshots/Screenshot1.png" alt="User Home Screen" width="250"></td>
+    <td><img src="./assets/screenshots/Screenshot2.png" alt="Pickup Scheduling Screen" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center">Home Screen</td>
+    <td align="center">Pickup Scheduling</td>
+  </tr>
+</table>
 
 ---
 
