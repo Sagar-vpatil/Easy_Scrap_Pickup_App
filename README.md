@@ -40,6 +40,25 @@ This app promotes efficient waste management by bridging the gap between users a
 
 ---
 
+## 💬 **Screenshots**
+
+### 📱 User Side
+1. **Login Screen**  
+   ![User Login Screen](.assets/screenshots/Screenshot1.png)
+
+2. **Home Screen**  
+   ![User Home Screen](.assets/screenshots/Screenshot2.png)
+
+3. **Pickup Scheduling**  
+   ![Pickup Scheduling Screen](.assets/screenshots/Screenshot4.png)
+
+---
+
+### 🖥️ Admin Side
+1. **Admin Dashboard**  
+   ![Admin Dashboard](.assets/screenshots/Screenshot7.png)
+---
+
 ## ⚙️ **Setup Instructions**
 
 ### 1. **Clone the repository**
