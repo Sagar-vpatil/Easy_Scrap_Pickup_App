@@ -44,7 +44,7 @@ This app promotes efficient waste management by bridging the gap between users a
 
 ### 📱 User Side
 1. **Login Screen**  
-   ![User Login Screen](.assets/screenshots/Screenshot1.png)
+   ![User Login Screen](./assets/screenshots/Screenshot1.png)
 
 2. **Home Screen**  
    ![User Home Screen](.assets/screenshots/Screenshot2.png)
